@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml; // using xml reader
+using System.Xml.Serialization; // used to create the XML Serialization
+using System.IO; // This is needed for the TextWriter
+
+namespace XMLSample2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Employee emp = new Employee();
+
+            emp.ID = 123;
+            emp.Name = "Ninja Nerd";
+            emp.SSNumber = 123456789;
+            emp.EntryDate = DateTime.Now;
+
+            Console.WriteLine($"Employee ID: {emp.ID} \nEmployee Name: {emp.Name}\nEmployee SS#: {emp.SSNumber}\nDate Created: {emp.EntryDate}");
+        }
+    }
+}
